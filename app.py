@@ -14,7 +14,10 @@ pipe = StableDiffusionControlNetPipeline.from_pretrained(
     "runwayml/stable-diffusion-v1-5", controlnet=controlnet, torch_dtype=torch.float16
 )
 pipe.scheduler = UniPCMultistepScheduler.from_config(pipe.scheduler.config)
-pipe.to("cuda")
+
+# Automatically select CPU or GPU if available
+device = "cuda" if torch.cuda.is_available() else "cpu"
+pipe.to(device)
 
 # Artistic style prompts
 STYLE_PROMPTS = {
@@ -69,7 +72,7 @@ def generate(image, style, guidance_scale=7.5, steps=30):
 
 # Gradio interface
 with gr.Blocks() as demo:
-    gr.Markdown("# 🎨 StyleMorph – Transform Portraits into Artistic Styles")
+    gr.Markdown("# 🎨 Morphix – Transform Portraits into Artistic Styles")
 
     with gr.Row():
         with gr.Column():
