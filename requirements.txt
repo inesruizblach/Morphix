@@ -1,0 +1,10 @@
+torch
+torchvision
+torchaudio
+diffusers
+gradio
+opencv-python
+numpy
+transformers
+accelerate
+huggingface-hub
