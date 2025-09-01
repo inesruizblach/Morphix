@@ -1,3 +1,13 @@
+---
+title: "Morphix"
+colorFrom: "blue"
+colorTo: "green"
+sdk: "gradio"
+sdk_version: "4.44.1"
+app_file: "app.py"
+pinned: true
+---
+
 # 🎨 Morphix – Portrait Style Transformation with Stable Diffusion + ControlNet
 
 **Morphix** is an AI app that lets you upload a **portrait photo** and transform it into different **artistic styles** (Comic, Anime, Oil Painting, Pixel Art, Watercolor).  
