@@ -97,7 +97,7 @@ def generate(image, style, guidance_scale=7.5, steps=30):
 with gr.Blocks() as demo:
     # Header with user tip
     gr.Markdown(
-        "# 🎨 StyleMorph – Transform Portraits into Artistic Styles\n"
+        "# 🎨 Morphix – Transform Portraits into Artistic Styles\n"
         "**Tip:** Please upload a portrait with the face centered for best results."
     )
 
