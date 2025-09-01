@@ -37,7 +37,7 @@ def preprocess_image(image):
     """
     Preprocess the uploaded image for the pipeline.
     - Converts image to RGB.
-    - Resizes to 512x512 pixels to avoid batch size issues.
+    - Keep aspect ratio, pad to square 512x512 pixels to avoid batch size issues.
     - Ensures a consistent input format for Stable Diffusion + ControlNet.
 
     Args:
@@ -46,7 +46,15 @@ def preprocess_image(image):
     Returns:
         PIL.Image: Preprocessed image ready for edge detection.
     """
-    return image.convert("RGB").resize((512, 512))
+    image = image.convert("RGB")
+    w, h = image.size
+    scale = 512 / max(w, h)
+    new_w, new_h = int(w*scale), int(h*scale)
+    image = image.resize((new_w, new_h))
+    new_img = Image.new("RGB", (512,512), (255,255,255))
+    new_img.paste(image, ((512-new_w)//2, (512-new_h)//2))
+    return new_img
+
 
 def canny_edge(image, low_threshold=100, high_threshold=200):
     """
