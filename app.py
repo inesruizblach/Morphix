@@ -14,7 +14,6 @@ pipe = StableDiffusionControlNetPipeline.from_pretrained(
     "runwayml/stable-diffusion-v1-5", controlnet=controlnet, torch_dtype=torch.float16
 )
 pipe.scheduler = UniPCMultistepScheduler.from_config(pipe.scheduler.config)
-pipe.enable_xformers_memory_efficient_attention()
 pipe.to("cuda")
 
 # Artistic style prompts
