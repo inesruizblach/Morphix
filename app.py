@@ -4,19 +4,20 @@ import cv2
 import numpy as np
 from diffusers import StableDiffusionControlNetPipeline, ControlNetModel, UniPCMultistepScheduler
 
+# Device detection
+dtype = torch.float16 if torch.cuda.is_available() else torch.float32
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
 # Load ControlNet pre-trained for Canny edge detection
 controlnet = ControlNetModel.from_pretrained(
-    "lllyasviel/sd-controlnet-canny", torch_dtype=torch.float16
+    "lllyasviel/sd-controlnet-canny", torch_dtype=dtype
 )
 
 # Load Stable Diffusion with ControlNet
 pipe = StableDiffusionControlNetPipeline.from_pretrained(
-    "runwayml/stable-diffusion-v1-5", controlnet=controlnet, torch_dtype=torch.float16
+    "runwayml/stable-diffusion-v1-5", controlnet=controlnet, torch_dtype=dtype
 )
 pipe.scheduler = UniPCMultistepScheduler.from_config(pipe.scheduler.config)
-
-# Automatically select CPU or GPU if available
-device = "cuda" if torch.cuda.is_available() else "cpu"
 pipe.to(device)
 
 # Artistic style prompts
