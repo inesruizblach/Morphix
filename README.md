@@ -54,3 +54,36 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
+
+---
+
+## 🖼️ Examples
+
+*Here’s how one portrait can take on five completely different looks using Morphix’s style options.  
+See below as the same photo is reimagined as Comic, Anime, Oil Painting,
+Pixel Art, and Watercolor styles.*
+
+**Input Portrait**  
+<img src="examples/input.jpg" width="160"/>
+
+**Comic Style**  
+<img src="examples/comic.png" width="160"/>
+
+**Anime Style**  
+<img src="examples/anime.png" width="160"/>
+
+**Oil Painting Style**  
+<img src="examples/oil-painting.png" width="160"/>
+
+**Pixel Art Style**  
+<img src="examples/pixel-art.png" width="160"/>
+
+**Watercolor Style**  
+<img src="examples/watercolor.png" width="160"/>
+
+**Note:**  
+For all examples, the **guidance scale** and **inference steps** were kept at their default values:  
+- Guidance scale: **7.5**  
+- Inference steps: **30**
+
+**Input photo source:** [Freepik – Adorable blonde woman with serious expression](https://www.freepik.com/free-photo/adorable-blonde-woman-with-serious-expression-dressed-blue-sweater-has-healthy-clean-skin-isolated-white-wall-pretty-woman-demonstrates-her-natural-beauty_10545097.htm#fromView=keyword&page=1&position=12&uuid=53998ca6-2c3a-4953-b327-bacd132d4a24&query=Woman+portrait)
