@@ -63,39 +63,14 @@ python app.py
 See below as the same photo is reimagined as Comic, Anime, Oil Painting,
 Pixel Art, and Watercolor styles.*
 
-<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+| Input Portrait | Comic Style | Anime Style |
+|----------------|-------------|-------------|
+| <img src="examples/input.jpg" width="160"/> | <img src="examples/comic.png" width="160"/> | <img src="examples/anime.png" width="160"/> |
 
-  <figure style="margin: 0; text-align: center;">
-    <div style="margin-bottom: 4px;">Input Portrait</div>
-    <img src="examples/input.jpg" width="160"/>
-  </figure>
+| Oil Painting Style | Pixel Art Style | Watercolor Style |
+|--------------------|-----------------|------------------|
+| <img src="examples/oil-painting.png" width="160"/> | <img src="examples/pixel-art.png" width="160"/> | <img src="examples/watercolor.png" width="160"/> |
 
-  <figure style="margin: 0; text-align: center;">
-    <div style="margin-bottom: 4px;">Comic Style</div>
-    <img src="examples/comic.png" width="160"/>
-  </figure>
-
-  <figure style="margin: 0; text-align: center;">
-    <div style="margin-bottom: 4px;">Anime Style</div>
-    <img src="examples/anime.png" width="160"/>
-  </figure>
-
-  <figure style="margin: 0; text-align: center;">
-    <div style="margin-bottom: 4px;">Oil Painting Style</div>
-    <img src="examples/oil-painting.png" width="160"/>
-  </figure>
-
-  <figure style="margin: 0; text-align: center;">
-    <div style="margin-bottom: 4px;">Pixel Art Style</div>
-    <img src="examples/pixel-art.png" width="160"/>
-  </figure>
-
-  <figure style="margin: 0; text-align: center;">
-    <div style="margin-bottom: 4px;">Watercolor Style</div>
-    <img src="examples/watercolor.png" width="160"/>
-  </figure>
-
-</div>
 
 **Note:**  
 For all examples, the **guidance scale** and **inference steps** were kept at their default values:  
